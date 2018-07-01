@@ -1,0 +1,27 @@
+{
+  "author": {
+    "name": "Maxime Petazzoni"
+  },
+  "bugs": {
+    "url": "https://github.com/mpetazzoni/leaflet-gpx/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "npm for https://github.com/mpetazzoni/leaflet-gpx",
+  "homepage": "https://github.com/mpetazzoni/leaflet-gpx#readme",
+  "keywords": [
+    "leaflet",
+    "gpx"
+  ],
+  "license": "BSD-2-Clause",
+  "main": "gpx.js",
+  "name": "leaflet-gpx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olewehrmeyer/leaflet-gpx.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}
