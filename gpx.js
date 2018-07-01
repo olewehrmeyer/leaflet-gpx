@@ -127,6 +127,7 @@ L.GPX = L.FeatureGroup.extend({
   },
 
   // Public methods
+  get_track_raw_data:  function() { return this._info.track},
   to_miles:            function(v) { return v / 1.60934; },
   to_ft:               function(v) { return v * 3.28084; },
   m_to_km:             function(v) { return v / 1000; },
@@ -250,7 +251,8 @@ L.GPX = L.FeatureGroup.extend({
       hr: {avg: 0, _total: 0, _points: []},
       duration: {start: null, end: null, moving: 0, total: 0},
       atemp: {avg: 0, _total: 0, _points: []},
-      cad: {avg: 0, _total: 0, _points: []}
+      cad: {avg: 0, _total: 0, _points: []},
+      track: []
     };
   },
 
@@ -498,6 +500,7 @@ L.GPX = L.FeatureGroup.extend({
       last = ll;
       coords.push(ll);
     }
+    this._info.track.push(coords);
 
     // check for gpx_style styling extension
     var polyline_options = this._merge_objs(_DEFAULT_POLYLINE_OPTS, {});
